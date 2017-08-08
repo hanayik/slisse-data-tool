@@ -1,0 +1,18 @@
+{
+  "name": "slisse-tx-data-conversion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-packager . --out=dist --platform=darwin --icon ./icon.icns --overwrite --tmpdir=false",
+    "osx-sign": "codesign --deep --force --verbose -s 'Developer ID Application: Taylor Hanayik' ./dist/slisse-tx-data-conversion-darwin-x64/slisse-tx-data-conversion.app",
+    "startAppWithLogging": "./dist/slisse-tx-data-conversion-darwin-x64/slisse-tx-data-conversion.app/Contents/MacOS/slisse-tx-data-conversion"
+  },
+  "author": "Taylor Hanayik",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-packager": "^8.7.2"
+  }
+}
